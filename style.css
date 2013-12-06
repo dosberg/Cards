@@ -1,0 +1,22 @@
+body {
+	background: #eee;
+}
+.card {
+	float: left;
+	margin: 20px;
+}
+.front, .back {
+  width: 350px;
+  height: 250px;
+  background-color: #fff;
+  font-family: 'ChunkFive Regular', Tahoma, Helvetica;
+  font-size: 12px;
+  color: #000;
+}
+.cardback {
+	display: none;
+}
+
+ol {
+	margin: 0;
+}

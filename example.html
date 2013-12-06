@@ -1,0 +1,75 @@
+<!doctype>
+<html>
+	<head>
+		<title>Card Flip</title>
+		<link rel="stylesheet" type="text/css" href="style.css">					
+	</head>
+	<body>
+		<section>
+			<div class="card">
+				<div class="front">
+					Card 1
+				</div>	
+				<div class="cardback">
+					<ol>
+						<li>Test 1</li>
+						<li>Test 2</li>
+						<li>Test 3</li>
+					</ol>	
+				</div>
+			</div>
+			<div class="card">
+				<div class="front">
+					Card 2
+				</div>	
+				<div class="cardback">
+					<ol>
+						<li>Test 4</li>
+						<li>Test 5</li>
+						<li>Test 6</li>
+					</ol>	
+				</div>
+			</div>
+			<div class="card">
+				<div class="front">
+					Card 3
+				</div>	
+				<div class="cardback">
+					<ol>
+						<li>Test 7</li>
+						<li>Test 8</li>
+						<li>Test 9</li>
+					</ol>	
+				</div>
+			</div>				
+		</section>
+		<footer>			
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+			<script src="jquery.flippy.min.js"></script>
+			<script type="text/javascript">
+				$(function(){
+					
+					var $this = $(this);
+					$(document).on('click', '.front', function() {
+						$(this).removeClass('front').addClass('back');
+					
+			            $(this).flippy({
+			                color_target: "#fff",
+			                duration: "500",
+			                verso: $(this).parent().find('.cardback').html(),
+			                onStart: function(){
+			                    // foo
+			                }
+			             });
+					});	
+
+					$(document).on('click', '.back', function() {
+
+						$(this).flippyReverse();
+						$(this).removeClass('back').addClass('front');
+					});
+				});
+			</script>	
+		</footer>						
+	</body>
+</html>
