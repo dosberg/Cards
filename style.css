@@ -4,6 +4,7 @@ body {
 .card {
 	float: left;
 	margin: 20px;
+	cursor: alias;
 }
 .front, .back {
   width: 350px;
